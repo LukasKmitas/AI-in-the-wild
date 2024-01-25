@@ -114,7 +114,31 @@ def depthFirstSearch(problem):
 def breadthFirstSearch(problem):
     """Search the shallowest nodes in the search tree first."""
     "*** YOUR CODE HERE ***"
-    util.raiseNotDefined()
+ 
+    print("Start:", problem.getStartState())
+    print("Is the start a goal?", problem.isGoalState(problem.getStartState()))
+    print("Start's successors:", problem.getSuccessors(problem.getStartState()))
+
+    queue = util.Queue()
+    queue.push((problem.getStartState(), []))
+    print("Start stack:", queue.list)
+    
+    visited = list()
+
+    while not queue.isEmpty():
+        currentState, steps = queue.pop()
+        if currentState in visited:
+            continue
+        if problem.isGoalState(currentState):
+            return steps
+
+        visited.append(currentState)
+        for state, action, cost in problem.getSuccessors(currentState):
+            queue.push((state, steps + [ action ]))
+
+    return []
+    
+    #util.raiseNotDefined()
     
 def uniformCostSearch(problem):
     """Search the node of least total cost first."""
@@ -131,7 +155,35 @@ def nullHeuristic(state, problem=None):
 def aStarSearch(problem, heuristic=nullHeuristic):
     """Search the node that has the lowest combined cost and heuristic first."""
     "*** YOUR CODE HERE ***"
-    util.raiseNotDefined()
+    
+    priorityQueue = util.PriorityQueue()
+    start_state = problem.getStartState()
+    start_cost = 0
+    start_heuristic = heuristic(start_state, problem)
+    priorityQueue.push((start_state, [], start_cost), start_cost + start_heuristic)
+    
+    visited = set()
+
+    while not priorityQueue.isEmpty():
+        currentState, steps, currentCost = priorityQueue.pop()
+        if currentState in visited:
+            continue
+    
+        visited.add(currentState)
+        
+        if problem.isGoalState(currentState):
+            return steps
+        
+        for next_state, action, step_cost in problem.getSuccessors(currentState):
+            if next_state not in visited:
+                next_steps = steps + [action]
+                next_cost = currentCost + step_cost
+                next_heuristic = heuristic(next_state, problem)
+                priorityQueue.push((next_state, next_steps, next_cost), next_cost + next_heuristic)
+    
+    return []
+
+    #util.raiseNotDefined()
     
 # Abbreviations
 bfs = breadthFirstSearch
