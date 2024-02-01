@@ -29,12 +29,14 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_
 # Create Decision Tree classifer object using information gain as the splitting criteria.
 clf = DecisionTreeClassifier(criterion='entropy')
 
+#################################
+#           P1                  #
 # Train Decision Tree Classifer
 clf = clf.fit(X_train,y_train)
 
 new_patient_data = {}
 for feature in feature_cols:
-    value = float(input(f"Enter the value for feature '{feature}': "))
+    value = float(input(f"Enter the value (number) for feature '{feature}': "))
     new_patient_data[feature] = [value]
 
 # Create a DataFrame with the user's input data
@@ -47,6 +49,8 @@ if prediction[0] == 0:
     print("The model predicts that the new patient does not have diabetes.")
 else:
     print("The model predicts that the new patient has diabetes.")
+
+#################################
 
 #Predict the response for test dataset
 #Lets print out the first few rows of the test data.
