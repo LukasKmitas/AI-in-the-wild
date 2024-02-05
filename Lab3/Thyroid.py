@@ -6,6 +6,9 @@ from sklearn.model_selection import train_test_split
 from sklearn import metrics
 from sklearn.preprocessing import LabelEncoder
 
+# might need to install scikit-learn
+# py -m pip install scikit-learn
+
 # Load dataset
 col_names = ['Age', 'Gender', 'Smoking', 'Hx Smoking', 'Hx Radiothreapy',
              'Thyroid Function', 'Physical Examination', 'Adenopathy', 'Pathology', 'Focality',
@@ -57,9 +60,11 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_
 # Create Decision Tree Classifier
 clf = DecisionTreeClassifier(criterion='entropy')
 
-####      SAME RESULT     ####
-clf = DecisionTreeClassifier(criterion='entropy', random_state=1)
-##############################
+#####################################
+####      TO GET SAME RESULT     ####
+#####################################
+#clf = DecisionTreeClassifier(criterion='entropy', random_state=1)
+#####################################
 
 # Train Decision Tree Classifier
 clf = clf.fit(X_train, y_train)
@@ -69,6 +74,12 @@ y_pred = clf.predict(X_test)
 
 # Model Accuracy
 print("Accuracy:", metrics.accuracy_score(y_test, y_pred))
+
+####        DIFFERENCE           ####
+# The accuracy in thyroid seems higher than the one in ID3.py
+# Complexity of Data: The Thyroid dataset appears to require more preprocessing steps before it can be used for modeling,
+# the Diabetes dataset is more straightforward with primarily numerical data.
+##################
 
 # Ploting the tree
 plt.figure(figsize=(15,8))
