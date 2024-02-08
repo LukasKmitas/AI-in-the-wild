@@ -5,7 +5,7 @@
 #include "Routine.h"
 #include <iostream>
 #include <cmath>
-//
+
 class Protect : public Routine
 {
 
@@ -60,10 +60,12 @@ public:
             if (destY > grid.gridSize) destY = grid.gridSize;
 
             droid->target = grid.getGridLocation(destX, destY);
-            if (!isDroidAtDestination(droid, grid)) {
+            if (!isDroidAtDestination(droid, grid)) 
+            {
                 moveDroid(droid, grid);
             }
-            else {
+            else 
+            {
                 succeed("Protect for " + droid->name);
             }
         }
@@ -100,7 +102,8 @@ public:
                 {
                     droid->position.y = droid->position.y + 1;
                 }
-                else {
+                else 
+                {
                     droid->position.y = droid->position.y - 1;
                 }
             }
@@ -110,13 +113,15 @@ public:
                 {
                     droid->position.x = droid->position.x + 1;
                 }
-                else {
+                else 
+                {
                     droid->position.x = droid->position.x - 1;
                 }
             }
         }
 
-        if (isDroidAtDestination(droid, grid)) {
+        if (isDroidAtDestination(droid, grid))
+        {
             succeed("MoveTo for " + droid->name);
         }
     }

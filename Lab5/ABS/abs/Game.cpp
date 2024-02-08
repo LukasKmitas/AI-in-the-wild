@@ -13,6 +13,7 @@
 #include "IsHealthLow.h"
 #include "Hide.h"
 #include "Protect.h"
+#include "Patrol.h"
 #include <iostream>
 #include <list>
 
@@ -272,13 +273,19 @@ void Game::setupDroids()
 	d7->setBrain(new CheckForAlarms()); //The Brain routine gets executed first.
 	d7->setColour(sf::Color(39,215,205));
 
-	m_droids.push_back(d1);
-	m_droids.push_back(d2);
-	m_droids.push_back(d3);
-	m_droids.push_back(d4);
-	m_droids.push_back(d5);
-    m_droids.push_back(d6);
-	m_droids.push_back(d7);
+	// This is a patrol behaviour
+	
+
+
+	//m_droids.push_back(d1);
+	//m_droids.push_back(d2);
+	//m_droids.push_back(d3);
+	//m_droids.push_back(d4);
+	//m_droids.push_back(d5); // Protect
+    //m_droids.push_back(d6);
+	//m_droids.push_back(d7);
+	m_droids.push_back(d8);
+
 	gridWorld.m_gridDroids = m_droids;	//So we can access them when inside the behaviours.
 
 	int x = gridWorld.getGridCellX(sf::Vector2i(400, 300));
