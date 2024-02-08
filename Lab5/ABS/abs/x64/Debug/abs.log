@@ -1,0 +1,67 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (BehaviourTreeExample.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  Grid.cpp
+C:\Users\gameuser\Desktop\ABS\abs\Grid.cpp(71,11): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\gameuser\Desktop\ABS\abs\Grid.cpp(77,11): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+  Droid.cpp
+C:\Users\gameuser\Desktop\ABS\abs\Droid.cpp(14,20): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\gameuser\Desktop\ABS\abs\Droid.cpp(26,40): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+C:\Users\gameuser\Desktop\ABS\abs\Droid.cpp(26,31): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+C:\Users\gameuser\Desktop\ABS\abs\Droid.cpp(43,25): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  Game.cpp
+C:\Users\gameuser\Desktop\ABS\abs\Wander.h(13,19): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\gameuser\Desktop\ABS\abs\Hide.h(63,23): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\gameuser\Desktop\ABS\abs\Hide.h(95,68): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\gameuser\Desktop\ABS\abs\Hide.h(95,51): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\gameuser\Desktop\ABS\abs\Hide.h(104,73): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\gameuser\Desktop\ABS\abs\Hide.h(104,53): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\gameuser\Desktop\ABS\abs\Hide.h(110,30): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\gameuser\Desktop\ABS\abs\Hide.h(111,30): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\gameuser\Desktop\ABS\abs\Hide.h(115,30): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\gameuser\Desktop\ABS\abs\Hide.h(116,30): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  HealthPill.cpp
+C:\Users\gameuser\Desktop\ABS\abs\HealthPill.cpp(21,41): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+C:\Users\gameuser\Desktop\ABS\abs\HealthPill.cpp(21,32): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+  Main.cpp
+  Node.cpp
+  Generating Code...
+  abs.vcxproj -> C:\Users\gameuser\Desktop\ABS\x64\Debug\abs.exe
