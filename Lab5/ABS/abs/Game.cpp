@@ -14,6 +14,7 @@
 #include "Hide.h"
 #include "Protect.h"
 #include "Patrol.h"
+#include "SearchForHealthPills.h"
 #include <iostream>
 #include <list>
 
@@ -273,9 +274,18 @@ void Game::setupDroids()
 	d7->setBrain(new CheckForAlarms()); //The Brain routine gets executed first.
 	d7->setColour(sf::Color(39,215,205));
 
-	// This is a patrol behaviour
-	
+	// This is a new behaviour - Patrol
+	std::vector<std::pair<int, int>> patrolPoints = { {1, 1}, {5, 1}, {5, 5}, {1, 5} };
+	Routine* patrolRoutine = new Patrol(gridWorld, patrolPoints);
+	Droid* d8 = new Droid("PatrolDroid", 1, 1, 1000, 0, 3, gridWorld);
+	d8->setBehaviour(patrolRoutine);
+	d8->setBrain(emptyBrain);
 
+	// Searches for the pills 
+	Droid* d9 = new Droid("HealthSearchDroid", 10, 1, 1000, 0, 3, gridWorld);
+	Routine* searchForHealthPillsRoutine = new SearchForHealthPills(gridWorld);
+	d9->setBehaviour(searchForHealthPillsRoutine);
+	d9->setBrain(emptyBrain);
 
 	//m_droids.push_back(d1);
 	//m_droids.push_back(d2);
@@ -284,12 +294,13 @@ void Game::setupDroids()
 	//m_droids.push_back(d5); // Protect
     //m_droids.push_back(d6);
 	//m_droids.push_back(d7);
-	m_droids.push_back(d8);
+
+	m_droids.push_back(d8); // new Behaviour
+	m_droids.push_back(d9); // Search for health pills
 
 	gridWorld.m_gridDroids = m_droids;	//So we can access them when inside the behaviours.
 
 	int x = gridWorld.getGridCellX(sf::Vector2i(400, 300));
-
 }
 
 /// <summary>

@@ -79,4 +79,14 @@ int Grid::getGridCellY(sf::Vector2i location)
     return y;
 }
 
-
+HealthPill* Grid::getHealthPillAt(int x, int y)
+{
+    for (HealthPill* pill : m_gridHealthPills) 
+    {
+        if (pill->x == x && pill->y == y && pill->visible) 
+        {
+            return pill;
+        }
+    }
+    return nullptr; // Return null if no HealthPill is found at the coordinates
+}

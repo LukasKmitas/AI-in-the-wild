@@ -172,6 +172,7 @@
     <ClInclude Include="Node.h" />
     <ClInclude Include="Routine.h" />
     <ClInclude Include="RunChildAndIgnoreResult.h" />
+    <ClInclude Include="SearchForHealthPills.h" />
     <ClInclude Include="Selector.h" />
     <ClInclude Include="Sequence.h" />
     <ClInclude Include="Wander.h" />

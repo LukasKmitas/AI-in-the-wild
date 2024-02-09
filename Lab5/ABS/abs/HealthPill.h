@@ -4,7 +4,7 @@
 #include <SFML/Graphics.hpp>
 #include "Grid.h"
 
-//class Grid;
+class Grid;
 
 class HealthPill
 {

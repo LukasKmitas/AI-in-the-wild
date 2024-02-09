@@ -52,5 +52,13 @@ public:
     sf::Texture droidTex;
     sf::Sprite droidSprite;
 
+    int getCurrentX() const 
+    {
+        return x;
+    }
+    int getCurrentY() const 
+    {
+        return y;
+    }
 };
 #endif

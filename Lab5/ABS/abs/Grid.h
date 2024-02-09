@@ -4,7 +4,7 @@
 #include <SFML/Graphics.hpp>
 //#include "Droid.h"
 #include "Node.h"
-//#include "HealthPill.h"
+#include "HealthPill.h"
 
 class Droid;	// Was getting issues with circular headers so had to forward reference instead.
 class HealthPill;
@@ -60,6 +60,8 @@ public:
 	sf::Vector2f getGridLocation(int x, int y);
 	int getGridCellX(sf::Vector2i location);
 	int getGridCellY(sf::Vector2i location);
+
+	HealthPill* getHealthPillAt(int x, int y);
 
 	Node **nodes;	//Design a variable sized grid which will be driven by a gridSize parameter.
 	int gridSize;	//Store the Gris size for ease of access later.
