@@ -229,7 +229,7 @@ void Game::setupDroids()
 	d2->setColour(sf::Color::Green);
 
 	//// Example Droid with a simple Wander Behaviour
-	Droid* d3 = new Droid("D3", 20, 3, 1000, 0, 3, gridWorld);
+	Droid* d3 = new Droid("D3", 10, 5, 1000, 0, 3, gridWorld);
 	Routine* wander3 = new Wander(gridWorld);
 	d3->setBehaviour(wander3);
 	d3->setBrain(emptyBrain);
@@ -244,8 +244,8 @@ void Game::setupDroids()
 
 	//// Example Droid with a Protect Behaviour
 	//// Protect Droid 1 (yellow) from Droid 2 (Green)
-	Droid* d5 = new Droid("D5", (rand() % (int)gridWorld.gridSize) + 1, (rand() % (int)gridWorld.gridSize) + 1, 1000, 0, 3, gridWorld);
-	Routine* protect1 = new Protect(1, 3, gridWorld); // Protect Yellow from Magenta
+	Droid* d5 = new Droid("D5", 7, 5, 1000, 0, 3, gridWorld);
+	Routine* protect1 = new Protect(1, 3, 4, gridWorld); // Protect Yellow from Magenta
 	d5->setBehaviour(protect1);
 	d5->setBrain(emptyBrain);
 	d5->setColour(sf::Color::Blue);
@@ -297,8 +297,8 @@ void Game::setupDroids()
     //m_droids.push_back(d6);
 	//m_droids.push_back(d7);
 
-	m_droids.push_back(d8); // new Behaviour
-	m_droids.push_back(d9); // Search for health pills
+	//m_droids.push_back(d8); // new Behaviour
+	//m_droids.push_back(d9); // Search for health pills
 
 	gridWorld.m_gridDroids = m_droids;	//So we can access them when inside the behaviours.
 

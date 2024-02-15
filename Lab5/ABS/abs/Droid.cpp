@@ -160,7 +160,6 @@ void Droid::addHealth(int newHealth)
 {
     health += newHealth;
     std::cout << name + " has picked up some extra health. Value " << newHealth << std::endl;
-
 }
 
 void Droid::handleCollisions(Grid& grid)

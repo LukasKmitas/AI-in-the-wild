@@ -24,7 +24,7 @@ public:
     }
 
     void reset(string msg) {
-        std::cout << ">>> Resetting routine " << routineType << msg << std::endl;
+       // std::cout << ">>> Resetting routine " << routineType << msg << std::endl;
         state = RoutineState::None;
 //        start(" resetting.");
         for (Routine* routine : routines)
@@ -35,7 +35,7 @@ public:
     {
         // Start the current sequence
         // Reset the current queue and copy the routines from setup
-        std::cout << ">>> Starting routine " << routineType << msg << std::endl;
+        //std::cout << ">>> Starting routine " << routineType << msg << std::endl;
         clearQueue(routineQueue);
         addRoutinesToQueue(routines, routineQueue);
         currentRoutine = routineQueue.front();

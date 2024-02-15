@@ -51,7 +51,7 @@ public:
 
     void moveDroid(Droid* droid, Grid& grid)
     {
-        std::cout << ">>> Droid " << droid->name << " moving to " << destX << ", " << destY << std::endl;
+       // std::cout << ">>> Droid " << droid->name << " moving to " << destX << ", " << destY << std::endl;
 
         sf::Vector2f direction = droid->target - droid->position;
         if (std::abs(grid.length(direction)) > 0)

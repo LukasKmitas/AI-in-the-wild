@@ -34,7 +34,7 @@ public:
 
     virtual void start(string msg)
     {
-        std::cout << ">>> Starting routine " << routineType << msg << std::endl;
+        //std::cout << ">>> Starting routine " << routineType << msg << std::endl;
         state = RoutineState::Running;
     };
 
@@ -58,12 +58,12 @@ public:
     };
 
     void succeed(string msg) {
-        std::cout << ">>> Routine SUCCEEDED for " << msg << std::endl;
+        //std::cout << ">>> Routine SUCCEEDED for " << msg << std::endl;
         state = RoutineState::Success;
     };
 
     void fail() {
-        std::cout << ">>> Routine FAILED for " << routineType << std::endl;
+        //std::cout << ">>> Routine FAILED for " << routineType << std::endl;
         state = RoutineState::Failure;
     };
 

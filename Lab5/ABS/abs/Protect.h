@@ -16,8 +16,9 @@ public:
     sf::Vector2f target;
     int droidA;
     int droidB;
+    int droidP;
 
-    Protect(int droidA, int droidB, Grid& g) : Routine()
+    Protect(int droidA, int droidB, int droidP, Grid& g) : Routine()
     {
         this->destX = 1;
         this->destY = 1;
@@ -27,8 +28,10 @@ public:
 
         this->droidA = droidA;
         this->droidB = droidB;
+        this->droidP = droidP;
         if (droidA != -1) this->droidA = droidA - 1;
         if (droidB != -1) this->droidB = droidB - 1;
+        if (droidP != -1) this->droidP = droidP - 1;
     }
 
     void reset(string msg)
@@ -69,22 +72,47 @@ public:
     }
     sf::Vector2f getProtectPoint(Grid& grid)
     {
-        sf::Vector2f A = grid.getGridLocation(grid.m_gridDroids[droidA]->x, grid.m_gridDroids[droidA]->y);
-        sf::Vector2f B = grid.getGridLocation(grid.m_gridDroids[droidB]->x, grid.m_gridDroids[droidB]->y);
+        // Calculate the midpoint between droid A and droid B
+        // This works 
+        sf::Vector2f protectPoint;
 
-        sf::Vector2f R = grid.getGridLocation(this->destX, this->destY);
+        int droidAx = grid.m_gridDroids[droidA]->x;
+        int droidAy = grid.m_gridDroids[droidA]->y;
+        int droidBx = grid.m_gridDroids[droidB]->x;
+        int droidBy = grid.m_gridDroids[droidB]->y;
 
-        sf::Vector2f AB = B - A;
-        sf::Vector2f AR = R - A;
+        protectPoint.x = (droidAx + droidBx) / 2.0f;
+        protectPoint.y = (droidAy + droidBy) / 2.0f;
 
-        float magnitudeAB = std::sqrt(AB.x * AB.x + AB.y * AB.y);
-        float dotProduct = (AR.x * AB.x + AR.y * AB.y);
-        //float projection = dotProduct / (magnitudeAB * magnitudeAB);
+        return protectPoint;
+        // End 
 
-        //sf::Vector2f closestPoint = A + AB * std::max(0.0f, std::min(projection, 1.0f));
-        sf::Vector2f interesctionPoint;
+       // sf::Vector2f A = grid.getGridLocation(grid.m_gridDroids[droidA]->x, grid.m_gridDroids[droidA]->y);
+       // sf::Vector2f B = grid.getGridLocation(grid.m_gridDroids[droidB]->x, grid.m_gridDroids[droidB]->y);
+       // //sf::Vector2f R = grid.getGridLocation(this->destX, this->destY);
+       // sf::Vector2f P = grid.getGridLocation(grid.m_gridDroids[droidP]->x, grid.m_gridDroids[droidP]->y);
 
-        return interesctionPoint;
+       // sf::Vector2f AB = B - A;
+       // sf::Vector2f AP = P - A;
+
+       // float magnitudeAB = std::sqrt(AB.x * AB.x + AB.y * AB.y);
+       // sf::Vector2f normalizedAB = AB / magnitudeAB;
+       // //float normalisedX = AB.x / magnitudeAB;
+       // //float normalisedY = AB.y / magnitudeAB;
+       // //float dotProduct = (P.x * P.x + A.y * A.y) * (normalisedX / normalisedY);
+       // float dotProduct = P.x - A.x * normalizedAB.x + P.y - A.y * normalizedAB.y;
+       // sf::Vector2f projection = P + normalizedAB * dotProduct;
+
+       ///* float interesctionX = A.x + (normalisedX * dotProduct);
+       // float interesctionY = A.y + (normalisedY * dotProduct);
+       // sf::Vector2f interesctionPoint = sf::Vector2f(interesctionX, interesctionY);*/
+
+       // std::cout << "A: " << A.x << ", " << A.y << std::endl;
+       // std::cout << "B: " << B.x << ", " << B.y << std::endl;
+       // std::cout << "P: " << P.x << ", " << P.y << std::endl;
+       // std::cout << "Closest Point: " << projection.x << ", " << projection.y << std::endl;
+
+       // return projection;
     }
 
     void moveDroid(Droid* droid, Grid& grid)
