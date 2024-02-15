@@ -9,6 +9,13 @@
 class Droid;	// Was getting issues with circular headers so had to forward reference instead.
 class HealthPill;
 
+struct TileState
+{
+	sf::Color currentColor;
+	sf::Time revertTime;
+	bool needsRevert = false;
+};
+
 //using namespace std;
 
 /// <summary>
@@ -57,6 +64,9 @@ public:
 	/// <returns>This is the length value</returns>
 	float length(sf::Vector2f t_vect);
 
+	void changeTileColor(int x, int y, sf::Color color, sf::Time duration);
+	void updateTileStates(sf::Time elapsedTime);
+
 	sf::Vector2f getGridLocation(int x, int y);
 	int getGridCellX(sf::Vector2i location);
 	int getGridCellY(sf::Vector2i location);
@@ -68,6 +78,7 @@ public:
 	sf::Vector2f startPos = sf::Vector2f(50.0f, 50.0f);
 	std::vector<Droid*> m_gridDroids;	//We will need access to all the Droids on the Grid when we are executing certain behaviours.
 	std::vector<HealthPill*> m_gridHealthPills;	//We will need access to all the HealthPills on the Grid when we are executing certain behaviours.
+	std::vector<std::vector<TileState>> tileStates;
 
 };
 #endif

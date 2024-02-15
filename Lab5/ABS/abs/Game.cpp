@@ -150,7 +150,7 @@ void Game::update(sf::Time t_deltaTime)
 		m_window.close();
 	}
 	updateDroids();
-
+	gridWorld.updateTileStates(t_deltaTime);
 }
 
 void Game::updateDroids()
@@ -280,18 +280,20 @@ void Game::setupDroids()
 	Droid* d8 = new Droid("PatrolDroid", 1, 1, 1000, 0, 3, gridWorld);
 	d8->setBehaviour(patrolRoutine);
 	d8->setBrain(emptyBrain);
+	d8->setColour(sf::Color(220, 20, 195));
 
 	// Searches for the pills 
 	Droid* d9 = new Droid("HealthSearchDroid", 10, 1, 1000, 0, 3, gridWorld);
 	Routine* searchForHealthPillsRoutine = new SearchForHealthPills(gridWorld);
 	d9->setBehaviour(searchForHealthPillsRoutine);
 	d9->setBrain(emptyBrain);
+	d9->setColour(sf::Color(255, 200, 0));
 
-	//m_droids.push_back(d1);
-	//m_droids.push_back(d2);
-	//m_droids.push_back(d3);
+	m_droids.push_back(d1);
+	m_droids.push_back(d2);
+	m_droids.push_back(d3);
 	//m_droids.push_back(d4);
-	//m_droids.push_back(d5); // Protect
+	m_droids.push_back(d5); // Protect
     //m_droids.push_back(d6);
 	//m_droids.push_back(d7);
 

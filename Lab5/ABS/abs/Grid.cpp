@@ -4,7 +4,7 @@ Grid::Grid(int size)
 {
     gridSize = size;
     setupGrid(size);
-
+    tileStates.resize(size, std::vector<TileState>(size));
 }
 
 Grid::~Grid()
@@ -50,6 +50,38 @@ float Grid::length(sf::Vector2f t_vect)
 
     float magn =  std::sqrt((t_vect.x * t_vect.x) + (t_vect.y * t_vect.y));
     return magn;
+}
+
+void Grid::changeTileColor(int x, int y, sf::Color color, sf::Time duration)
+{
+    if (x >= 0 && x < gridSize && y >= 0 && y < gridSize)
+    {
+        TileState& state = tileStates[x][y];
+        state.currentColor = color;
+        state.revertTime = duration;
+        state.needsRevert = true;
+        nodes[x][y].setColor(color);
+    }
+}
+
+void Grid::updateTileStates(sf::Time elapsedTime)
+{
+    for (int i = 0; i < gridSize; ++i) 
+    {
+        for (int j = 0; j < gridSize; ++j) 
+        {
+            TileState& state = tileStates[i][j];
+            if (state.needsRevert) 
+            {
+                state.revertTime -= elapsedTime;
+                if (state.revertTime <= sf::Time::Zero) 
+                {
+                    state.needsRevert = false;
+                    nodes[i][j].setColor(sf::Color::Green);
+                }
+            }
+        }
+    }
 }
 
 sf::Vector2f Grid::getGridLocation(int x, int y)

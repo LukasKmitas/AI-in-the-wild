@@ -4,6 +4,10 @@
 #include <iostream>
 #include <vector>
 
+/// <summary>
+/// At least its a different way of doing it :)
+/// </summary>
+
 class SearchForHealthPills : public Routine 
 {
 private:

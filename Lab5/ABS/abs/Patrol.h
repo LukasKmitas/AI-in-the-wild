@@ -46,6 +46,13 @@ public:
         }
 
         moveTo->act(droid, grid);
+ 
+        if (moveTo->isRunning())
+        {
+            int x = droid->getCurrentX();
+            int y = droid->getCurrentY();
+            grid.changeTileColor(x - 1, y - 1, sf::Color::Red, sf::seconds(3));
+        }
 
         if (moveTo->isSuccess())
         {
