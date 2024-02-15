@@ -17,7 +17,7 @@ public:
     int droidA;
     int droidB;
 
-    Protect(int droidA, int droidB, Grid& g) : Routine()    // Superclass constructor
+    Protect(int droidA, int droidB, Grid& g) : Routine()
     {
         this->destX = 1;
         this->destY = 1;
@@ -25,13 +25,10 @@ public:
         this->routineType = "Protect";
         this->routineGrid = &g;
 
-        // If we get -1 passed in then we will self select the droids in 'Act' below, so leave it as -1.
-        // Otherwise subtract 1 so we map to the correct index which starts at 0
         this->droidA = droidA;
         this->droidB = droidB;
         if (droidA != -1) this->droidA = droidA - 1;
         if (droidB != -1) this->droidB = droidB - 1;
-
     }
 
     void reset(string msg)
@@ -72,18 +69,22 @@ public:
     }
     sf::Vector2f getProtectPoint(Grid& grid)
     {
-        sf::Vector2f protectPoint;
+        sf::Vector2f A = grid.getGridLocation(grid.m_gridDroids[droidA]->x, grid.m_gridDroids[droidA]->y);
+        sf::Vector2f B = grid.getGridLocation(grid.m_gridDroids[droidB]->x, grid.m_gridDroids[droidB]->y);
 
-        // Calculate the midpoint between droid A and droid B
-        int droidAx = grid.m_gridDroids[droidA]->x;
-        int droidAy = grid.m_gridDroids[droidA]->y;
-        int droidBx = grid.m_gridDroids[droidB]->x;
-        int droidBy = grid.m_gridDroids[droidB]->y;
+        sf::Vector2f R = grid.getGridLocation(this->destX, this->destY);
 
-        protectPoint.x = (droidAx + droidBx) / 2.0f;
-        protectPoint.y = (droidAy + droidBy) / 2.0f;
+        sf::Vector2f AB = B - A;
+        sf::Vector2f AR = R - A;
 
-        return protectPoint;
+        float magnitudeAB = std::sqrt(AB.x * AB.x + AB.y * AB.y);
+        float dotProduct = (AR.x * AB.x + AR.y * AB.y);
+        //float projection = dotProduct / (magnitudeAB * magnitudeAB);
+
+        //sf::Vector2f closestPoint = A + AB * std::max(0.0f, std::min(projection, 1.0f));
+        sf::Vector2f interesctionPoint;
+
+        return interesctionPoint;
     }
 
     void moveDroid(Droid* droid, Grid& grid)
@@ -94,30 +95,15 @@ public:
             return;
 
         sf::Vector2f direction = droid->target - droid->position;
-        if (std::abs(grid.length(direction)) > 0)
+        float distance = std::sqrt(direction.x * direction.x + direction.y * direction.y);
+
+        if (distance > 0) 
         {
-            if (droid->target.y != droid->position.y)
-            {
-                if (droid->target.y > droid->position.y)
-                {
-                    droid->position.y = droid->position.y + 1;
-                }
-                else 
-                {
-                    droid->position.y = droid->position.y - 1;
-                }
-            }
-            if (droid->target.x != droid->position.x)
-            {
-                if (droid->target.x > droid->position.x)
-                {
-                    droid->position.x = droid->position.x + 1;
-                }
-                else 
-                {
-                    droid->position.x = droid->position.x - 1;
-                }
-            }
+            const float movementSpeed = 1.0;
+            sf::Vector2f normalizedDirection = direction / distance;
+            sf::Vector2f movement = normalizedDirection * movementSpeed;
+
+            droid->position += movement;
         }
 
         if (isDroidAtDestination(droid, grid))

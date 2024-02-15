@@ -1,56 +1,32 @@
 ﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (BehaviourTreeExample.vcxproj).  This can lead to incorrect clean and rebuild behavior.
   Game.cpp
-C:\Users\labuser\Desktop\Semester2\AI-in-the-wild\Lab5\ABS\abs\Wander.h(13,19): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  (compiling source file 'Game.cpp')
-  
-C:\Users\labuser\Desktop\Semester2\AI-in-the-wild\Lab5\ABS\abs\Hide.h(63,23): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  (compiling source file 'Game.cpp')
-  
-C:\Users\labuser\Desktop\Semester2\AI-in-the-wild\Lab5\ABS\abs\Hide.h(95,68): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
-C:\Users\labuser\Desktop\Semester2\AI-in-the-wild\Lab5\ABS\abs\Hide.h(95,68): warning C4244:         with
-C:\Users\labuser\Desktop\Semester2\AI-in-the-wild\Lab5\ABS\abs\Hide.h(95,68): warning C4244:         [
-C:\Users\labuser\Desktop\Semester2\AI-in-the-wild\Lab5\ABS\abs\Hide.h(95,68): warning C4244:             T=float
-C:\Users\labuser\Desktop\Semester2\AI-in-the-wild\Lab5\ABS\abs\Hide.h(95,68): warning C4244:         ]
-  (compiling source file 'Game.cpp')
-  
-C:\Users\labuser\Desktop\Semester2\AI-in-the-wild\Lab5\ABS\abs\Hide.h(95,51): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
-C:\Users\labuser\Desktop\Semester2\AI-in-the-wild\Lab5\ABS\abs\Hide.h(95,51): warning C4244:         with
-C:\Users\labuser\Desktop\Semester2\AI-in-the-wild\Lab5\ABS\abs\Hide.h(95,51): warning C4244:         [
-C:\Users\labuser\Desktop\Semester2\AI-in-the-wild\Lab5\ABS\abs\Hide.h(95,51): warning C4244:             T=float
-C:\Users\labuser\Desktop\Semester2\AI-in-the-wild\Lab5\ABS\abs\Hide.h(95,51): warning C4244:         ]
-  (compiling source file 'Game.cpp')
-  
-C:\Users\labuser\Desktop\Semester2\AI-in-the-wild\Lab5\ABS\abs\Hide.h(104,73): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
-C:\Users\labuser\Desktop\Semester2\AI-in-the-wild\Lab5\ABS\abs\Hide.h(104,73): warning C4244:         with
-C:\Users\labuser\Desktop\Semester2\AI-in-the-wild\Lab5\ABS\abs\Hide.h(104,73): warning C4244:         [
-C:\Users\labuser\Desktop\Semester2\AI-in-the-wild\Lab5\ABS\abs\Hide.h(104,73): warning C4244:             T=float
-C:\Users\labuser\Desktop\Semester2\AI-in-the-wild\Lab5\ABS\abs\Hide.h(104,73): warning C4244:         ]
-  (compiling source file 'Game.cpp')
-  
-C:\Users\labuser\Desktop\Semester2\AI-in-the-wild\Lab5\ABS\abs\Hide.h(104,53): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
-C:\Users\labuser\Desktop\Semester2\AI-in-the-wild\Lab5\ABS\abs\Hide.h(104,53): warning C4244:         with
-C:\Users\labuser\Desktop\Semester2\AI-in-the-wild\Lab5\ABS\abs\Hide.h(104,53): warning C4244:         [
-C:\Users\labuser\Desktop\Semester2\AI-in-the-wild\Lab5\ABS\abs\Hide.h(104,53): warning C4244:             T=float
-C:\Users\labuser\Desktop\Semester2\AI-in-the-wild\Lab5\ABS\abs\Hide.h(104,53): warning C4244:         ]
-  (compiling source file 'Game.cpp')
-  
-C:\Users\labuser\Desktop\Semester2\AI-in-the-wild\Lab5\ABS\abs\Hide.h(110,30): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-  (compiling source file 'Game.cpp')
-  
-C:\Users\labuser\Desktop\Semester2\AI-in-the-wild\Lab5\ABS\abs\Hide.h(111,30): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-  (compiling source file 'Game.cpp')
-  
-C:\Users\labuser\Desktop\Semester2\AI-in-the-wild\Lab5\ABS\abs\Hide.h(115,30): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-  (compiling source file 'Game.cpp')
-  
-C:\Users\labuser\Desktop\Semester2\AI-in-the-wild\Lab5\ABS\abs\Hide.h(116,30): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-  (compiling source file 'Game.cpp')
-  
-C:\Users\labuser\Desktop\Semester2\AI-in-the-wild\Lab5\ABS\abs\Protect.h(54,26): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-  (compiling source file 'Game.cpp')
-  
-C:\Users\labuser\Desktop\Semester2\AI-in-the-wild\Lab5\ABS\abs\Protect.h(55,26): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-  (compiling source file 'Game.cpp')
-  
-C:\Users\labuser\Desktop\Semester2\AI-in-the-wild\Lab5\ABS\abs\Game.cpp(224,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  abs.vcxproj -> C:\Users\labuser\Desktop\Semester2\AI-in-the-wild\Lab5\ABS\x64\Debug\abs.exe
+C:\Users\gameuser\Desktop\AI-in-the-wild\Lab5\ABS\abs\Wander.h(13,19): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\gameuser\Desktop\AI-in-the-wild\Lab5\ABS\abs\Hide.h(63,23): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\gameuser\Desktop\AI-in-the-wild\Lab5\ABS\abs\Hide.h(95,68): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\gameuser\Desktop\AI-in-the-wild\Lab5\ABS\abs\Hide.h(95,51): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\gameuser\Desktop\AI-in-the-wild\Lab5\ABS\abs\Hide.h(104,73): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\gameuser\Desktop\AI-in-the-wild\Lab5\ABS\abs\Hide.h(104,53): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\gameuser\Desktop\AI-in-the-wild\Lab5\ABS\abs\Hide.h(110,30): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\gameuser\Desktop\AI-in-the-wild\Lab5\ABS\abs\Hide.h(111,30): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\gameuser\Desktop\AI-in-the-wild\Lab5\ABS\abs\Hide.h(115,30): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\gameuser\Desktop\AI-in-the-wild\Lab5\ABS\abs\Hide.h(116,30): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\gameuser\Desktop\AI-in-the-wild\Lab5\ABS\abs\Protect.h(55,26): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\gameuser\Desktop\AI-in-the-wild\Lab5\ABS\abs\Protect.h(56,26): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\gameuser\Desktop\AI-in-the-wild\Lab5\ABS\abs\Game.cpp(224,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  abs.vcxproj -> C:\Users\gameuser\Desktop\AI-in-the-wild\Lab5\ABS\x64\Debug\abs.exe
