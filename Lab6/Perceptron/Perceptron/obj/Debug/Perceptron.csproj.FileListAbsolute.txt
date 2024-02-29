@@ -79,3 +79,14 @@ C:\Users\gameuser\Downloads\Perceptron(1)\Perceptron\Perceptron\obj\Debug\Percep
 C:\Users\gameuser\Downloads\Perceptron(1)\Perceptron\Perceptron\obj\Debug\Perceptron.Properties.Resources.resources
 C:\Users\gameuser\Downloads\Perceptron(1)\Perceptron\Perceptron\obj\Debug\Perceptron.csproj.GenerateResource.cache
 C:\Users\gameuser\Downloads\Perceptron(1)\Perceptron\Perceptron\obj\Debug\Perceptron.csproj.CoreCompileInputs.cache
+C:\Users\gameuser\Desktop\AI-in-the-wild\Lab6\Perceptron\Perceptron\bin\Debug\Perceptron.exe.config
+C:\Users\gameuser\Desktop\AI-in-the-wild\Lab6\Perceptron\Perceptron\bin\Debug\Perceptron.exe
+C:\Users\gameuser\Desktop\AI-in-the-wild\Lab6\Perceptron\Perceptron\bin\Debug\Perceptron.pdb
+C:\Users\gameuser\Desktop\AI-in-the-wild\Lab6\Perceptron\Perceptron\obj\Debug\Perceptron.csproj.AssemblyReference.cache
+C:\Users\gameuser\Desktop\AI-in-the-wild\Lab6\Perceptron\Perceptron\obj\Debug\Perceptron.csproj.SuggestedBindingRedirects.cache
+C:\Users\gameuser\Desktop\AI-in-the-wild\Lab6\Perceptron\Perceptron\obj\Debug\Perceptron.frmMain.resources
+C:\Users\gameuser\Desktop\AI-in-the-wild\Lab6\Perceptron\Perceptron\obj\Debug\Perceptron.Properties.Resources.resources
+C:\Users\gameuser\Desktop\AI-in-the-wild\Lab6\Perceptron\Perceptron\obj\Debug\Perceptron.csproj.GenerateResource.cache
+C:\Users\gameuser\Desktop\AI-in-the-wild\Lab6\Perceptron\Perceptron\obj\Debug\Perceptron.csproj.CoreCompileInputs.cache
+C:\Users\gameuser\Desktop\AI-in-the-wild\Lab6\Perceptron\Perceptron\obj\Debug\Perceptron.exe
+C:\Users\gameuser\Desktop\AI-in-the-wild\Lab6\Perceptron\Perceptron\obj\Debug\Perceptron.pdb
