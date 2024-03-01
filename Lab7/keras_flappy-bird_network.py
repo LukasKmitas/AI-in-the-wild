@@ -20,7 +20,7 @@ from tensorflow.keras.layers import Dense
 # 4. X – Coordinate of the Bird / Species itself
 # 5. y – Coordinate of the Bird / Species itself
 
-dataset = loadtxt('training_data.csv', delimiter=',')
+dataset = loadtxt('FlappyBird_ANN_BP/FlappyBird_ANN_BP/training_data.csv', delimiter=',')
 # split into input (X) and output (y) variables
 X = dataset[:,0:5]
 y = dataset[:,5]
