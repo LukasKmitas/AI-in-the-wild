@@ -22,7 +22,7 @@ public:
 	static const bool player = false;	// True if human wants to play. Don't forget to set birdCount=1 below.
 	static const bool ai = true;		// True if we are loading a neural network and the AI plays. Don't forget to set birdCount=1 below.
 
-	static const int birdCount = 1;		// Set to 1 if we are in player mode.
+	static const int birdCount = 10;		// Set to 1 if we are in player mode.
 										// If in AI mode and you set it to more than one 
 										// then all birds will have the same brain type and will start in different vertical positions.
 

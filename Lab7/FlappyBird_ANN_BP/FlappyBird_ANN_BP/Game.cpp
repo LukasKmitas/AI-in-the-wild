@@ -36,7 +36,7 @@ static double const S_PER_UPDATE = 5;
 /// 
 /// </summary>
 Game::Game() :
-	m_window(sf::VideoMode(Game::width, Game::height), "How To Train Your AI Dragon"),
+	m_window(sf::VideoMode(Game::width, Game::height), "How To Train Your AI Dragon - LUKAS KMITAS"),
 	m_exitGame{ false } //when true game will exit
 
 {
@@ -233,7 +233,7 @@ void Game::loop()
 					{
 						capture = true;
 						std::cout << "======================" << std::endl;
-						myTrainingfile.open("training_data.csv");
+ 						myTrainingfile.open("training_data.csv");
 					}
 					else
 					{

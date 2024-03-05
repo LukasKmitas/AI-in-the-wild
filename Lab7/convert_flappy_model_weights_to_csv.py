@@ -2,6 +2,7 @@
 # Load the keras model and write the weights out to a txt file
 # We will read the txt file back into flappy bird's brain
 
+import tensorflow as tf
 from tensorflow.keras.models import load_model
 import numpy
 import os

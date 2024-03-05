@@ -9,6 +9,7 @@
 
 import numpy as np
 from numpy import loadtxt
+import tensorflow as tf
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
 
